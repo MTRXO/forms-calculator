@@ -9,6 +9,7 @@ namespace forms_calculator
         string number1;
         string number2;
         char sign = ' ';
+        int result;
        
         
        
@@ -83,6 +84,31 @@ namespace forms_calculator
 
         private void suma_Click(object sender, EventArgs e)
         {
+            switch (sign)
+            {
+                case '+':
+                    result = (int.Parse(number1)+int.Parse(number2));
+                    tb.Text = result.ToString();
+                    break;
+                case '-':
+                    result = (int.Parse(number1)-int.Parse(number2));
+                    tb.Text = result.ToString();
+                    break;
+                case '/':
+                    result = (int.Parse(number1) / int.Parse(number2));
+                    tb.Text = result.ToString();
+                    break;
+                case '*':
+                    result = (int.Parse(number1) * int.Parse(number2));
+                    tb.Text = result.ToString();
+                    break;
+
+
+
+
+
+            }
+                
           
 
         }

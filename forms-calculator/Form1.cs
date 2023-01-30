@@ -6,9 +6,9 @@ namespace forms_calculator
         {
             InitializeComponent();
         }
-        double number1;
-        double number2;
-        char sign;
+        string number1;
+        string number2;
+        char sign = ' ';
        
         
        
@@ -101,9 +101,19 @@ namespace forms_calculator
         {
             sign = '/'; 
         }
-        public int dzialanie (double a)
+        private void dzialanie (int a)
         {
-            return 0;
+            if (sign == ' ')
+            {
+                number1 += a;
+                tb.Text = number1;
+
+            }
+            else
+            {
+                number2 += a;
+                tb.Text = number2;
+            }
         
         }
     }

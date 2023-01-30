@@ -44,6 +44,7 @@ namespace forms_calculator
         private void minus_Click(object sender, EventArgs e)
         {
             sign = '-';
+            tb.Text = null;
 
         }
 
@@ -65,6 +66,7 @@ namespace forms_calculator
         private void plus_Click(object sender, EventArgs e)
         {
             sign = '+';
+            tb.Text = " ";
         }
 
         private void seven_Click(object sender, EventArgs e)
@@ -84,38 +86,39 @@ namespace forms_calculator
 
         private void suma_Click(object sender, EventArgs e)
         {
-            switch (sign)
-            {
-                case '+':
-                    result = (int.Parse(number1)+int.Parse(number2));
-                    tb.Text = result.ToString();
-                    break;
-                case '-':
-                    result = (int.Parse(number1)-int.Parse(number2));
-                    tb.Text = result.ToString();
-                    break;
-                case '/':
-                    result = (int.Parse(number1) / int.Parse(number2));
-                    tb.Text = result.ToString();
-                    break;
-                case '*':
-                    result = (int.Parse(number1) * int.Parse(number2));
-                    tb.Text = result.ToString();
-                    break;
+            
+            
+                switch (sign)
+                {
+                    case '+':
+                        result = (int.Parse(number1) + int.Parse(number2));
+                        tb.Text = result.ToString();
+                        break;
+                    case '-':
+                        result = (int.Parse(number1) - int.Parse(number2));
+                        tb.Text = result.ToString();
+                        break;
+                    case '/':
+                        result = (int.Parse(number1) / int.Parse(number2));
+                        tb.Text = result.ToString();
+                        break;
+                    case '*':
+                        result = (int.Parse(number1) * int.Parse(number2));
+                        tb.Text = result.ToString();
+                        break;
 
+                }
 
-
-
-
-            }
-                
           
+         
+                
 
         }
 
         private void mn_Click(object sender, EventArgs e)
         {
             sign = '*';
+            tb.Text = " ";
         }
 
         private void zero_Click(object sender, EventArgs e)
@@ -125,7 +128,8 @@ namespace forms_calculator
 
         private void dz_Click(object sender, EventArgs e)
         {
-            sign = '/'; 
+            sign = '/';
+            tb.Text = " ";
         }
         private void dzialanie (int a)
         {
@@ -137,10 +141,17 @@ namespace forms_calculator
             }
             else
             {
+                
                 number2 += a;
                 tb.Text = number2;
             }
         
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+        
+
         }
     }
 }

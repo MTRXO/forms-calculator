@@ -44,6 +44,7 @@
             this.dz = new System.Windows.Forms.Button();
             this.zero = new System.Windows.Forms.Button();
             this.mn = new System.Windows.Forms.Button();
+            this.clear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tb
@@ -204,11 +205,22 @@
             this.mn.UseVisualStyleBackColor = true;
             this.mn.Click += new System.EventHandler(this.mn_Click);
             // 
+            // clear
+            // 
+            this.clear.Location = new System.Drawing.Point(178, 12);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(35, 23);
+            this.clear.TabIndex = 16;
+            this.clear.Text = "C";
+            this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(192, 180);
+            this.ClientSize = new System.Drawing.Size(221, 180);
+            this.Controls.Add(this.clear);
             this.Controls.Add(this.mn);
             this.Controls.Add(this.zero);
             this.Controls.Add(this.dz);
@@ -225,6 +237,9 @@
             this.Controls.Add(this.two);
             this.Controls.Add(this.one);
             this.Controls.Add(this.tb);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -251,5 +266,6 @@
         private Button dz;
         private Button zero;
         private Button mn;
+        private Button clear;
     }
 }

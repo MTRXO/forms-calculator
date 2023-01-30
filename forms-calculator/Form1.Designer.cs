@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb = new System.Windows.Forms.TextBox();
             this.one = new System.Windows.Forms.Button();
             this.two = new System.Windows.Forms.Button();
             this.three = new System.Windows.Forms.Button();
@@ -46,13 +46,13 @@
             this.mn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tb
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 23);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tb.Location = new System.Drawing.Point(12, 12);
+            this.tb.Name = "tb";
+            this.tb.Size = new System.Drawing.Size(160, 23);
+            this.tb.TabIndex = 0;
+            this.tb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // one
             // 
@@ -224,7 +224,7 @@
             this.Controls.Add(this.three);
             this.Controls.Add(this.two);
             this.Controls.Add(this.one);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -235,7 +235,7 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox tb;
         private Button one;
         private Button two;
         private Button three;

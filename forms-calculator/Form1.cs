@@ -150,6 +150,11 @@ namespace forms_calculator
 
         private void clear_Click(object sender, EventArgs e)
         {
+            number1 = null;
+            number2 = null;
+            sign = ' ';
+            tb.Text = " ";
+
         
 
         }
